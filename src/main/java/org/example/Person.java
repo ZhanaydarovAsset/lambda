@@ -1,0 +1,46 @@
+package org.example;
+
+public class Person implements Comparable<Person> {
+    private String name;
+    private int age;
+    private double salary;
+    private Department department;
+
+    public Person(String name, int age, double salary, Department department) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+        this.department = department;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public Department getDepartment() {
+        return department;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", department=" + department +
+                '}';
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.name.compareTo(o.name);
+    }
+}
